@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Kalam:700" rel="stylesheet">
+</head>
+
+<body>
+    <header id="header">
+        <nav id="navbar" class="navbar navbar-expand-lg">
+            <a class="navbar-brand px-2 py-0 " href="#">To-Do-List</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </button>
+
+            <div class="collapse navbar-collapse" id="myNavbar">
+
+
+
+            </div>
+        </nav>
+
+    </header>
+
+    <div class="container">
+        <form action="/update/<%=contact.id%>?_method=PUT" method="POST">
+
+
+            <div class="input-group my-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="input-text"><i class="fas fa-user"></i></span>
+                </div>
+                <input type="datetime-local" class="form-control form-control-lg text-capitalize" name="date"
+                    placeholder="Enter Date here" value="<%=contact.date%>">
+            </div>
+            <div class="input-group my-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="input-phone"><i class="fas fa-phone"></i></span>
+                </div>
+                <input type="day" class="form-control form-control-lg text-capitalize" name="Day"
+                    placeholder="Enter Day here" value="<%=contact.Day%>">
+            </div>
+
+
+
+
+
+
+
+            <div class="input-group my-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="input-username"><i class="fas fa-users"></i></span>
+                </div>
+                <input type="text" name="task" class="form-control form-control-lg text-capitalize"
+                    placeholder="Enter Task here" value="<%=contact.task%>">
+
+            </div>
+
+            <button type="submit" class="btn btn-block btn-lg text-uppercase contact-btn"><i
+                    class="far fa-hand-point-right mr-2"></i>submit</button>
+
+        </form>
+
+
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Kalam:700" rel="stylesheet">
+</head>
+
+<body>
+    <header id="header">
+        <nav id="navbar" class="navbar navbar-expand-lg">
+            <a class="navbar-brand px-2 py-0 " href="#">To-Do-List</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
+
+            </button>
+
+
+            <div class="collapse navbar-collapse" id="myNavbar">
+
+
+
+            </div>
+        </nav>
+
+    </header>
+    <div class="d-flex flex-row">
+        <div class="container shadow">
+            <div class="row">
+
+                <div class="col-sm-6 col-lg-10 text-right my-3">
+                    <form class="box" action="/" method="post">
+
+
+                        <div class="input-group my-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="input-text"><i class="fas fa-user"></i></span>
+                            </div>
+                            <input type="datetime-local" class="form-control form-control-lg text-capitalize"
+                                name="name" placeholder="Enter Date here">
+                        </div>
+                        <div class="input-group my-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="input-phone"><i class="fas fa-phone"></i></span>
+                            </div>
+                            <input type="day" name="email" class="form-control form-control-lg text-capitalize"
+                                name="Day" placeholder="Enter Day here">
+                        </div>
+
+
+
+
+
+
+
+                        <div class="input-group my-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="input-username"><i class="fas fa-users"></i></span>
+                            </div>
+                            <input type="text" name="mobile" class="form-control form-control-lg text-capitalize"
+                                placeholder="Enter Task here">
+
+                        </div>
+
+                        <button type="submit" class="btn btn-block btn-lg text-uppercase contact-btn"><i
+                                class="far fa-hand-point-right mr-2"></i>submit</button>
+
+                    </form>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="container shadow">
+            <div class="row">
+
+                <div class="col-sm-6 col-lg-10 text-left my-3">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Date</th>
+                                <th scope="col">Day</th>
+                                <th scope="col">Task</th>
+                                <th scope="col">update</th>
+                                <th scope="col">delete</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <%if(data != undefined){%>
+                            <% data.forEach(contact=>{ %>
+                            <tr>
+                                <td><%= contact.date %></td>
+                                <td><%= contact.Day %></td>
+                                <td><%= contact.task %></td>
+                                <td><a href="/update/ <%= contact._id %>">update</a></td>
+                                <td>
+                                    <form method="POST" action="/delete/<%= contact._id %>?_method=DELETE"><button>
+                                            delete
+                                        </button></form>
+                                </td>
+                            </tr>
+                            <% }); %>
+                            <%}%>
+
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <!--  isotope-->
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+</body>
+
+</html>

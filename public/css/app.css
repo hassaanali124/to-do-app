@@ -1,0 +1,83 @@
+body {
+  font-family: 'Kalam', cursive;
+  position: relative;
+  background: #f1fffa;
+}
+
+
+
+.height-60 {
+  min-height: 80vh;
+}
+
+#contact {
+  background: linear-gradient(rgba(42, 145, 52, 0.3), rgba(42, 145, 52, 0.3)), url(img/banner-1.jpeg)center/cover fixed no-repeat;
+}
+
+
+#contact .card {
+  background: rgba(0, 0, 0, 0.5);
+  transition: all 2s ease;
+}
+
+#contact .card:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+#contact .card-header {
+  color: #2a9134;
+}
+
+#contact .input-group-text {
+  background: #2a9134;
+  border-color: #2a9134;
+  color: #242424
+}
+
+#contact .card input {
+  color: #606060;
+}
+
+#contact .card input::placeholder {
+  color: #606060;
+}
+
+.contact-btn {
+  color: #f1fffa;
+  background: #2a9134;
+  transition: all 2s ease-in-out;
+}
+
+.contact-btn:hover {
+  background: transparent;
+  border-color: #2a9134;
+  color: #2a9134;
+}
+
+/* tbody , th , tr , td{
+ 
+  border: 2px solid black;
+  padding: 20px;
+} */
+table{
+   margin-top:30px ;
+}
+.p-25px{
+    padding: 25px;
+}
+footer{
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    background-color: #f8f9fa!important;
+    height: 50px;
+}
+img{
+    object-fit: cover;
+    height: 150px !important;
+    width: 200px !important;
+ }
+
+footer p{    
+    line-height: 50px;
+}
